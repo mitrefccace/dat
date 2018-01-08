@@ -14,6 +14,6 @@ This JSON file mirrors config.json_TEMPLATE. The parameter names are the same. T
 
 The *color_config.json_TEMPLATE* and *default_color_config.json_TEMPLATE* files must be copied to the ~/dat folder and renamed to *color_config.json* and *default_color_config.json*. The *default_color_config.json* file is a 508 compliant color scheme. Do not change this file. Make any custom changes in the *color_config.json* file, but there is a Management Portal web page that maintains this. For dynamic updating of Busylight status colors, the Management Portal reads the ACE Direct URL from the configuration file.
 
-## process.json
+## process.json_TEMPLATE
 
-This is the template process.json file that works with pm2: ```pm2 start process.json```. Update each server with the appropriate port numbers.
+This is a template for process.json. Rename it to process.json and update the port numbers. To start all servers: ```pm2 start process.json```.
