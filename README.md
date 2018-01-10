@@ -1,10 +1,14 @@
 # dat
 
-This folder contains global configuration and data files. It lives in the home folder of the user (~/).
+This repo contains configuration and data files for the ACE Direct system. It lives in the home folder of the user (~/).
 
-## Global Configuration File
+## config.json_TEMPLATE
 
-The global configuration file is *~/dat/config.json*. Its template is *~/dat/config.json_TEMPLATE*. All ACE Direct applications running on this machine read this single *config.json* file. If the *config.json* file does not exist, copy *config.json_TEMPLATE* to *config.json* and modify the appropriate values.
+All ACE Direct servers use a global JSON configuration file. The common section of the configuration file contains common parameters for all servers. The remaining sections are application-specific parameters. To create the configuration file for the first time, copy *~/dat/config.json_TEMPLATE* to *~/dat/config.json*. Then add the values for your environment. This file is ignored by Git, so doing a ```git pull``` will not overwrite your existing *config.json* file.
+
+## parameter_desc.json
+
+The purpose of the *parameter_desc.json* file is to document each parameter in the global configuration file. It has the same structure as *config.json_TEMPLATE*, but the values are descriptions of each parameter. This file must be maintained along with *config.json_TEMPLATE*.
 
 ## parameter_desc.json
 
