@@ -14,10 +14,10 @@ The purpose of the *parameter_desc.json* file is to document each parameter in t
 
 This JSON file mirrors config.json_TEMPLATE. The parameter names are the same. The parameter values are descriptions of the fields. This JSON file documents the config. parameters, and it must be maintained along with config.json_TEMPLATE.
 
-## Kuando Busylight Configuration Files
+## color_config.json_TEMPLATE and default_color_config.json_TEMPLATE
 
-The *color_config.json_TEMPLATE* and *default_color_config.json_TEMPLATE* files must be copied to the ~/dat folder and renamed to *color_config.json* and *default_color_config.json*. The *default_color_config.json* file is a 508 compliant color scheme. Do not change this file. Make any custom changes in the *color_config.json* file, but there is a Management Portal web page that maintains this. For dynamic updating of Busylight status colors, the Management Portal reads the ACE Direct URL from the configuration file.
+The *color_config.json_TEMPLATE* and *default_color_config.json_TEMPLATE* files are the Kuando Busylight Configuration Files. To create them for the first time, rename them to *color_config.json* and *default_color_config.json*. The *default_color_config.json* file is a 508 compliant color scheme. Do not change this file. Make any custom changes in the *color_config.json* file, but there is a Management Portal web page that maintains this. For dynamic updating of Busylight status colors, the Management Portal reads the ACE Direct URL from the configuration file.
 
 ## process.json_TEMPLATE
 
-This is a template for process.json. Rename it to process.json and update the port numbers. To start all servers: ```pm2 start process.json```.
+The purpose of the process.json_TEMPLATE file is to simplify the starting/stopping/restarting of ACE Direct servers. To create it for the first time, rename it to process.json and update the port numbers. To start all servers the first time: ```pm2 start process.json```. Then you may execute ```pm2 start all```, ```pm2 stop all```, ```pm2 restart all```, ```pm2 start 1```, ```pm2 stop 1```, etc. 
