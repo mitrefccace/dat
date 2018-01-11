@@ -44,7 +44,7 @@
   },
   {
      "name": "Virtual Agent: 0006",
-     "cwd": "./virtualagent",
+     "cwd": "/home/centos/virtualagent",
      "script": "./bin/www",
      "error_file": "./logs/virtual_agent_error.log",
      "out_file": "./logs/virtual_agent.log"
