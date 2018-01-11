@@ -1,6 +1,6 @@
 {
   "apps": [{
-    "name": "ACE Direct: 0000",
+    "name": "ACE Direct",
     "script": "adserver.js",
     "cwd": "/home/centos/acedirect",
     "out_file": "./logs/pm2-adserver.log",
@@ -8,42 +8,42 @@
 
   },
   {
-    "name":"Management Dashboard: 0001",
+    "name":"Management Dashboard",
     "script": "server-db.js",
     "cwd": "/home/centos/managementportal",
     "out_file": "./logs/pm2-server-db.log",
     "error_file": "./logs/pm2-server-db-error.log"
   },
   {
-    "name":"Fendesk: 0002",
+    "name":"Fendesk",
     "script": "app.js",
     "cwd": "/home/centos/fendesk",
     "out_file": "./logs/pm2-fendesk.log",
     "error_file": "./logs/pm2-fendesk-error.log"
   },
   {
-    "name":"CDR: 0003",
+    "name":"CDR",
     "script": "app.js",
     "cwd": "/home/centos/acr-cdr",
     "out_file": "./logs/pm2-app.log",
     "error_file": "./logs/pm2-app-error.log"
   },
   {
-    "name":"ASERVER: 0004",
+    "name":"ASERVER",
     "script": "app.js",
     "cwd": "/home/centos/aserver",
     "out_file": "./logs/pm2-app.log",
     "error_file": "./logs/pm2-app-error.log"
   },
   {
-    "name":"USERVER: 0005",
+    "name":"USERVER",
     "script": "app.js",
     "cwd": "/home/centos/userver",
     "out_file": "./logs/pm2-app.log",
     "error_file": "./logs/pm2-app-error.log"
   },
   {
-     "name": "Virtual Agent: 0006",
+     "name": "Virtual Agent",
      "cwd": "/home/centos/virtualagent",
      "script": "./bin/www",
      "error_file": "./logs/virtual_agent_error.log",
