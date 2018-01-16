@@ -94,8 +94,8 @@
     }
   },
   "openam": {
-    "fqdn": "Fully qualified domain name for OpenAM",
-    "private_ip": "Private IP address of OpenAM server",
+    "fqdn": "Fully qualified domain name of this server",
+    "private_ip": "Private IP address of this server",
     "port": "OpenAM server port number",
     "path": "OpenAM web path"
   },
