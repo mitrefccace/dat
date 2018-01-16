@@ -48,15 +48,7 @@
     "https_listen_port": "Port that the ACE Direct portal listens on"
   },
   "acr_cdr": {
-    "https_listen_port": "Port that the ACR CDR portal listens on",
-    "mysql": {
-      "host": "Private IP address of the CDR MySQL server",
-      "port": "Port number of the CDR MySQL server",
-      "user": "MySQL username for the CDR MySQL server",
-      "password": "MySQL password for the CRD MySQL server",
-      "cdr_database_name": "CDR database name",
-      "cdr_table_name": "CDR table name"
-    }
+    "https_listen_port": "Port that the ACR CDR portal listens on"
   },
   "management_portal": {
     "https_listen_port": "Port that the Management Portal listens on",
@@ -102,9 +94,11 @@
   "database_servers": {
     "mysql": {
       "host": "Private IP address of the ACE Direct MySQL server",
-      "user": "Username for the ACE Direct MySQL server",
-      "password": "Password for the ACE Direct MySQL server",
-      "database_name": "ACE Direct database name",
+      "user": "Username for the ACE Direct MySQL user",
+      "password": "Password for the ACE Direct MySQL user",
+      "ad_database_name": "ACE Direct database name",
+      "cdr_database_name": "Asterisk database name",
+      "cdr_table_name": "Asterisk table name",
       "port": "Port number for the ACE Direct MySQL server"
     },
     "redis": {
