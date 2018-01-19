@@ -1,6 +1,6 @@
 {
   "common": {
-    "cleartext": "Include this field with any value to indicate that the file is in clear text (not encoded).",
+    "cleartext": "Include this field with any non-empty string to indicate that the file is in clear text (not encoded).",
     "debug_level": "Logging level: ALL TRACE DEBUG INFO WARN ERROR FATAL OFF",
     "private_ip": "Private IP address of this server", 
     "fqdn": "Fully qualified domain name of this server",
