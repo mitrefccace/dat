@@ -1,8 +1,8 @@
 {
   "common": {
-    "cleartext": "Include this field with any non-empty string to indicate that the file is in clear text (not encoded).",
+    "cleartext": "A non-empty string indicates that the file is in clear text (not encoded).",
     "debug_level": "Logging level: ALL TRACE DEBUG INFO WARN ERROR FATAL OFF",
-    "private_ip": "Private IP address of this server", 
+    "private_ip": "Private IP address of this server",
     "fqdn": "Fully qualified domain name of this server",
     "https": {
       "certificate": "Full path to the certificate file",
@@ -10,9 +10,9 @@
     }
   },
   "zendesk": {
-    "private_ip": "IP address of the zendesk/fendesk server", 
+    "private_ip": "IP address of the zendesk/fendesk server",
     "port": "Port number of the zendesk/fendesk server",
-    "protocol": "zendesk is http, fendesk is https",
+    "protocol": "Use http for zendesk, https for fendesk",
     "user_id": "email address of the zendesk user",
     "token": "token of the zendesk user"
   },
@@ -23,7 +23,7 @@
       "stun": "Fully qualified domain name of the stun server",
       "stun_port": "Port of the stun server",
       "ws_port": "Websocket port",
-      "channel": "channel: SIP"
+      "channel": "default to SIP"
     },
     "ami": {
       "id": "Asterisk AMI userid",
@@ -107,7 +107,7 @@
       "port": "Redis server port"
     },
     "mongodb": {
-      "connection_uri": "Mongo DB connection URI"
+      "connection_uri": "Mongo DB connection URI; leave blank to disable"
     }
   },
   "complaint_redirect": {
@@ -119,7 +119,7 @@
     "url": "URL of zendesk pop ticket; omit this field to skip zendesk pop"
   },
   "nginx": {
-    "fqdn": "Fully qualified domain name of the NGINX server"
+    "fqdn": "Fully qualified domain name of this server"
   },
   "virtual_agent": {
     "port": "Virtual Agent portal port",
@@ -130,6 +130,6 @@
   },
   "skinny_mode" : {
     "agent": "Enable skinny mode for agent portal: true or false",
-    "consumer": "Enable skinny mode for consumer portal: true or false" 
+    "consumer": "Enable skinny mode for consumer portal: true or false"
   }
 }
