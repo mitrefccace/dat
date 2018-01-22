@@ -20,4 +20,29 @@ The *color_config.json_TEMPLATE* and *default_color_config.json_TEMPLATE* files 
 
 ## process.json_TEMPLATE
 
-The purpose of the process.json_TEMPLATE file is to simplify the starting/stopping/restarting of ACE Direct servers. To create it for the first time, rename it to process.json. To start all servers the first time: ```pm2 start process.json```. Then you may execute ```pm2 start all```, ```pm2 stop all```, ```pm2 restart all```, ```pm2 start 1```, ```pm2 stop 1```, etc. 
+The purpose of the process.json_TEMPLATE file is to simplify the starting/stopping/restarting of ACE Direct servers. To create it for the first time, rename it to process.json. To start all servers the first time: ```pm2 start process.json```. Then you may execute ```pm2 start all```, ```pm2 stop all```, ```pm2 restart all```, ```pm2 start 1```, ```pm2 stop 1```, etc.
+
+## acedirectdefault.sql
+
+This file is a SQL script to create the ACE Direct database. Globally replace _EXTENSION_PASSWORD_ with the actual Asterisk extension passwords. Then import the SQL data. Here are sample instructions:
+
+```
+[centos@dev1demo ~]$ mysql -u someuser -p -h 127.0.0.1
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 26
+Server version: 5.6.39 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> create database acedirect;
+Query OK, 1 row affected (0.00 sec)
+
+MySQL [(none)]> quit
+Bye
+[centos@dev1demo ~]$ mysql -u someuser -p -h 127.0.0.1 acedirect < acedirectdefault.sql
+```
+
+Finally, update your dat/config.json file to point to this ACE Direct database.
