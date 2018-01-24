@@ -1,6 +1,7 @@
 {
   "common": {
     "cleartext": "A non-empty string indicates that the file is in clear text (not encoded).",
+    "version": "The version number for this ACE Direct release, e.g.: 2.1",
     "debug_level": "Logging level: ALL TRACE DEBUG INFO WARN ERROR FATAL OFF",
     "private_ip": "Private IP address of this server",
     "fqdn": "Fully qualified domain name of this server",
