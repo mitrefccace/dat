@@ -1,6 +1,6 @@
 -- MySQL dump 10.14  Distrib 5.5.52-MariaDB, for Linux (x86_64)
 --
--- Host: ace-direct-mysql.ceq7afndeyku.us-east-1.rds.amazonaws.com    Database: tempdb
+-- Host: ace-direct-mysql.ceq7afndeyku.us-east-1.rds.amazonaws.com    Database: acedirectdefault
 -- ------------------------------------------------------
 -- Server version	5.6.37-log
 
@@ -50,29 +50,7 @@ CREATE TABLE `agent_data` (
 
 LOCK TABLES `agent_data` WRITE;
 /*!40000 ALTER TABLE `agent_data` DISABLE KEYS */;
-INSERT INTO `agent_data` VALUES
-(4,'dagent1','Dagent1#','John','Adams','AD Agent','444-444-4444','dagent1@portal.com','Organization Zulu',1,1,4,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":6,\"height\":13},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":12}]'),
-(5,'dagent2','Dagent2#','Thomas','Jefferson','AD Agent','444-444-4444','dagent2@portal.com','Organization Zulu',1,1,5,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":8,\"height\":12},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":5}]'),
-(6,'dagent3','Dagent3#','James','Madison','AD Agent','444-444-4444','dagent3@portal.com','Organization Zulu',1,1,6,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":8,\"height\":16},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":11}]'),
-(7,'dagent4','Dagent4#','James','Monroe','AD Agent','444-444-4444','dagent4@portal.com','Organization Zulu',1,1,7,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":8,\"height\":14},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":13}]'),
-(8,'dagent5','Dagent5#','John','Quincy Adams','AD Agent','444-444-4444','dagent5@portal.com','Organization Zulu',1,1,8,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":8,\"height\":8},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":5}]'),
-(9,'dagent6','Dagent6#','Andrew','Jackson','AD Agent','444-444-4444','dagent6@portal.com','Organization Zulu',1,1,9,1,2,NULL),
-(10,'dagent7','Dagent7#','Martin','Van Buren','AD Agent','444-444-4444','dagent7@portal.com','Organization Zulu',1,1,10,1,2,NULL),
-(11,'dagent8','Dagent8#','Andrew','Johnson','AD Agent','888-888-8888','dagent8@portal.com','Organization Kilo',1,1,11,1,2,NULL),
-(12,'dagent9','Dagent9#','Ulysses','Grant','AD Agent','888-888-8888','dagent9@portal.com','Organization Lima',1,1,12,1,2,NULL),
-(13,'dagent10','Dagent10#','Rutherford','Hayes','AD Agent','888-888-8888','dagent10@portal.com','Organization Mike',1,1,13,1,2,NULL),
-(14,'dagent11','Dagent11#','James','Garfield','AD Agent','888-888-8888','dagent11@portal.com','Organization November',1,1,14,1,2,NULL),
-(15,'dagent12','Dagent12#','Chester','Arthur','AD Agent','888-888-8888','dagent12@portal.com','Organization Oscar',1,1,15,1,2,NULL),
-(16,'dagent13','Dagent13#','Grover','Cleveland','AD Agent','888-888-8888','dagent13@portal.com','Organization Papa',1,1,16,1,2,NULL),
-(17,'dagent14','Dagent14#','Benjamin','Harrison','AD Agent','888-888-8888','dagent14@portal.com','Organization Quebec',1,1,17,1,2,NULL),
-(18,'dagent15','Dagent15#','William','McKinley','AD Agent','888-888-8888','dagent15@portal.com','Organization Romeo',1,1,18,1,2,NULL),
-(19,'dagent16','Dagent16#','Theodore','Roosevelt','AD Agent','888-888-8888','dagent16@portal.com','Organization Sierra',1,1,19,1,2,NULL),
-(20,'dagent17','Dagent17#','William','Taft','AD Agent','888-888-8888','dagent17@portal.com','Organization Tango',1,1,20,1,2,NULL),
-(21,'dagent18','Dagent18#','Woodrow','Wilson','AD Agent','888-888-8888','dagent18@portal.com','Organization Uniform',1,1,21,1,2,NULL),
-(22,'dagent19','Dagent19#','Warren','Harding','AD Agent','888-888-8888','dagent19@portal.com','Organization Victor',1,1,22,1,2,NULL),
-(23,'dagent20','Dagent20#','Calvin','Coolidge','AD Agent','888-888-8888','dagent20@portal.com','Organization Whiskey',1,1,23,1,2,NULL),
-(24,'manager','manager1234','George','Washington','Manager','000-000-0000','manager@portal.com','Organization Zulu',1,1,24,2,0,NULL),
-(25,'admin','Admin1#','Marie','Charles','Manager','444-444-4444','administrator@portal.com','Organization Zulu',0,0,25,0,NULL,NULL);
+INSERT INTO `agent_data` VALUES (4,'dagent1','Dagent1#','John','Adams','AD Agent','444-444-4444','dagent1@portal.com','Organization Zulu',1,1,4,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":6,\"height\":13},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":12}]'),(5,'dagent2','Dagent2#','Thomas','Jefferson','AD Agent','444-444-4444','dagent2@portal.com','Organization Zulu',1,1,5,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":8,\"height\":12},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":5}]'),(6,'dagent3','Dagent3#','James','Madison','AD Agent','444-444-4444','dagent3@portal.com','Organization Zulu',1,1,6,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":8,\"height\":16},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":11}]'),(7,'dagent4','Dagent4#','James','Monroe','AD Agent','444-444-4444','dagent4@portal.com','Organization Zulu',1,1,7,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":8,\"height\":14},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":13}]'),(8,'dagent5','Dagent5#','John','Quincy Adams','AD Agent','444-444-4444','dagent5@portal.com','Organization Zulu',1,1,8,1,2,'[{\"id\":\"gsvideobox\",\"x\":0,\"y\":0,\"width\":8,\"height\":8},{\"id\":\"gschatbox\",\"x\":8,\"y\":0,\"width\":4,\"height\":5}]'),(9,'dagent6','Dagent6#','Andrew','Jackson','AD Agent','444-444-4444','dagent6@portal.com','Organization Zulu',1,1,9,1,2,NULL),(10,'dagent7','Dagent7#','Martin','Van Buren','AD Agent','444-444-4444','dagent7@portal.com','Organization Zulu',1,1,10,1,2,NULL),(11,'dagent8','Dagent8#','Andrew','Johnson','AD Agent','888-888-8888','dagent8@portal.com','Organization Kilo',1,1,11,1,2,NULL),(12,'dagent9','Dagent9#','Ulysses','Grant','AD Agent','888-888-8888','dagent9@portal.com','Organization Lima',1,1,12,1,2,NULL),(13,'dagent10','Dagent10#','Rutherford','Hayes','AD Agent','888-888-8888','dagent10@portal.com','Organization Mike',1,1,13,1,2,NULL),(14,'dagent11','Dagent11#','James','Garfield','AD Agent','888-888-8888','dagent11@portal.com','Organization November',1,1,14,1,2,NULL),(15,'dagent12','Dagent12#','Chester','Arthur','AD Agent','888-888-8888','dagent12@portal.com','Organization Oscar',1,1,15,1,2,NULL),(16,'dagent13','Dagent13#','Grover','Cleveland','AD Agent','888-888-8888','dagent13@portal.com','Organization Papa',1,1,16,1,2,NULL),(17,'dagent14','Dagent14#','Benjamin','Harrison','AD Agent','888-888-8888','dagent14@portal.com','Organization Quebec',1,1,17,1,2,NULL),(18,'dagent15','Dagent15#','William','McKinley','AD Agent','888-888-8888','dagent15@portal.com','Organization Romeo',1,1,18,1,2,NULL),(19,'dagent16','Dagent16#','Theodore','Roosevelt','AD Agent','888-888-8888','dagent16@portal.com','Organization Sierra',1,1,19,1,2,NULL),(20,'dagent17','Dagent17#','William','Taft','AD Agent','888-888-8888','dagent17@portal.com','Organization Tango',1,1,20,1,2,NULL),(21,'dagent18','Dagent18#','Woodrow','Wilson','AD Agent','888-888-8888','dagent18@portal.com','Organization Uniform',1,1,21,1,2,NULL),(22,'dagent19','Dagent19#','Warren','Harding','AD Agent','888-888-8888','dagent19@portal.com','Organization Victor',1,1,22,1,2,NULL),(23,'dagent20','Dagent20#','Calvin','Coolidge','AD Agent','888-888-8888','dagent20@portal.com','Organization Whiskey',1,1,23,1,2,NULL),(24,'manager','manager1234','George','Washington','Manager','000-000-0000','manager@portal.com','Organization Zulu',1,1,24,2,0,NULL),(25,'admin','Admin1#','Marie','Charles','Manager','444-444-4444','administrator@portal.com','Organization Zulu',0,0,25,0,NULL,NULL);
 /*!40000 ALTER TABLE `agent_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -285,4 +263,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-24 17:26:54
+-- Dump completed on 2018-01-26 23:22:28
