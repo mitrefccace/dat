@@ -118,7 +118,8 @@
     "url": "URL of zendesk pop ticket; omit this field to skip zendesk pop"
   },
   "nginx": {
-    "fqdn": "Fully qualified domain name of this server"
+    "fqdn": "Fully qualified domain name of this server",
+    "port": "NGINX server port number"
   },
   "virtual_agent": {
     "port": "Virtual Agent portal port",
