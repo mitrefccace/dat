@@ -84,6 +84,11 @@
       "max_age": "Max. age: 2400000"
     }
   },
+  "nginx": {
+    "fqdn": "Fully qualified domain name of this server",
+    "private_ip": "Private IP address of the nginx server",
+    "port": "NGINX server port number"
+  },
   "openam": {
     "fqdn": "Fully qualified domain name of the openam server",
     "private_ip": "Private IP address of the openam server",
@@ -116,10 +121,6 @@
   },
   "popticket": {
     "url": "URL of zendesk pop ticket; omit this field to skip zendesk pop"
-  },
-  "nginx": {
-    "fqdn": "Fully qualified domain name of this server",
-    "port": "NGINX server port number"
   },
   "virtual_agent": {
     "port": "Virtual Agent portal port",
