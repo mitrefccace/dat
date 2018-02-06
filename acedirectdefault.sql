@@ -1,4 +1,4 @@
--- MySQL dump 10.14  Distrib 5.5.52-MariaDB, for Linux (x86_64)
+-- MySQL dump 10.14  Distrib 5.5.56-MariaDB, for Linux (x86_64)
 --
 -- Host: ace-direct-mysql.ceq7afndeyku.us-east-1.rds.amazonaws.com    Database: acedirectdefault
 -- ------------------------------------------------------
@@ -91,6 +91,7 @@ CREATE TABLE `asterisk_operating_status` (
   `start` varchar(8) DEFAULT '00:00',
   `end` varchar(8) DEFAULT '24:00',
   `force_off_hours` tinyint(1) DEFAULT '0',
+  `business_mode` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -102,7 +103,7 @@ CREATE TABLE `asterisk_operating_status` (
 
 LOCK TABLES `asterisk_operating_status` WRITE;
 /*!40000 ALTER TABLE `asterisk_operating_status` DISABLE KEYS */;
-INSERT INTO `asterisk_operating_status` VALUES (1,'14:00','21:30',0);
+INSERT INTO `asterisk_operating_status` VALUES (1,'15:00','21:30',0,0);
 /*!40000 ALTER TABLE `asterisk_operating_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,4 +264,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-26 23:22:28
+-- Dump completed on 2018-02-06 15:34:28
