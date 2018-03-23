@@ -24,24 +24,15 @@ The purpose of the process.json_TEMPLATE file is to simplify the starting/stoppi
 
 ## acedirectdefault.sql
 
-This file is a SQL script to create the initial ACE Direct database and populate it with sample data. Globally replace _EXTENSION_PASSWORD_ in this script with your actual Asterisk extension passwords. To import this database into your environment: 1) Create an ACE Direct database user with appropriate grants to read/write to the database, 2) Create the database, and 3) Import the script into the database. Here is a sample run:
+This file is a SQL script to create the initial ACE Direct database and populate it with sample data. You should replace the following parameters in the file with your own: 
+
+* _EXTENSION_PASSWORD_ : the password used for the WebRTC agent extensions (found in pjsip.conf of Asterisk)
+* _ACEDIRECT_PASSWORD_: The password of the `acedirect` MySQL user 
+* _ASTERISK_PASSWORD_: The password of the `asterisk` MySQL user 
+
+After installing MySQL, you can import the database and user config with the following command:
 
 ```
-[centos@dev1demo ~]$ mysql -u someuser -p -h 127.0.0.1
-Enter password:
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MySQL connection id is 26
-Server version: 5.6.39 MySQL Community Server (GPL)
-
-Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-MySQL [(none)]> create database acedirect;
-Query OK, 1 row affected (0.00 sec)
-
-MySQL [(none)]> quit
-Bye
 [centos@dev1demo ~]$ mysql -u someuser -p -h 127.0.0.1 acedirect < acedirectdefault.sql
 ```
 
