@@ -15,6 +15,23 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- create asterisk databse
+
+CREATE DATABASE IF NOT EXISTS asterisk; USE asterisk;
+  
+CREATE TABLE `cdr` ( `calldate` datetime NOT NULL default CURRENT_TIMESTAMP, `clid` varchar(80) NOT NULL default '', `src` varchar(80) NOT NULL default '', `dst` varchar(80) NOT NULL default '', `dcontext` varchar(80) NOT NULL default '',  `channel` varchar(80) NOT NULL default '', `dstchannel` varchar(80) NOT NULL default '', `lastapp` varchar(80) NOT NULL default '', `lastdata` varchar(80) NOT NULL default '', `duration` int(11) NOT NULL default '0', `billsec` int(11) NOT NULL default '0', `disposition` varchar(45) NOT NULL default '',  `amaflags` int(11) NOT NULL default '0', `accountcode` varchar(20) NOT NULL default '', `userfield` varchar(255) NOT NULL default '', `uniqueid` VARCHAR(32) NOT NULL default '', `linkedid` VARCHAR(32) NOT NULL default '', `sequence` VARCHAR(32) NOT NULL default '', `peeraccount` VARCHAR(32) NOT NULL default '' );
+  
+ALTER TABLE `cdr` ADD INDEX ( `calldate` );
+ALTER TABLE `cdr` ADD INDEX ( `dst` );
+ALTER TABLE `cdr` ADD INDEX ( `accountcode` );
+
+
+-- create acedirect database
+
+CREATE DATABASE IF NOT EXISTS acedirect; USE acedirect;
+
+
 --
 -- Table structure for table `agent_data`
 --
@@ -264,4 +281,14 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-06 15:34:28
+-- Create acedirect and asterisk users and set appropriate permissions.
+-- For security, the acedirect user only gets read access to the CDR table.
+
+CREATE USER 'asterisk'@'%' IDENTIFIED BY '_ASTERISK_PASSWORD_';GRANT ALL PRIVILEGES ON 'asterisk'.* TO 'username'@'%' ;
+
+CREATE USER 'acedirect'@'%' IDENTIFIED BY '_ACEDIRECT_PASSWORD_';GRANT ALL PRIVILEGES ON *.* TO 'acedirect'@'%';
+
+GRANT SELECT ON 'asterisk'.* to 'acedirect'@'%';
+
+FLUSH PRIVILEGES;
+
