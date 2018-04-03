@@ -284,11 +284,11 @@ UNLOCK TABLES;
 -- Create acedirect and asterisk users and set appropriate permissions.
 -- For security, the acedirect user only gets read access to the CDR table.
 
-CREATE USER 'asterisk'@'%' IDENTIFIED BY '_ASTERISK_PASSWORD_';GRANT ALL PRIVILEGES ON 'asterisk'.* TO 'username'@'%' ;
+CREATE USER `asterisk`@`%` IDENTIFIED BY `_ASTERISK_PASSWORD_`;GRANT ALL PRIVILEGES ON `asterisk`.* TO `username`@`%` ;
 
-CREATE USER 'acedirect'@'%' IDENTIFIED BY '_ACEDIRECT_PASSWORD_';GRANT ALL PRIVILEGES ON *.* TO 'acedirect'@'%';
+CREATE USER `acedirect`@`%` IDENTIFIED BY `_ACEDIRECT_PASSWORD_`;GRANT ALL PRIVILEGES ON *.* TO `acedirect`@`%`;
 
-GRANT SELECT ON 'asterisk'.* to 'acedirect'@'%';
+GRANT SELECT ON `asterisk`.* to `acedirect`@`%`;
 
 FLUSH PRIVILEGES;
 
