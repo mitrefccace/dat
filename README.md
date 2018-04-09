@@ -4,15 +4,11 @@ This repo contains configuration and data files for the ACE Direct system. It li
 
 ## config.json_TEMPLATE
 
-All ACE Direct servers use a global JSON configuration file named *config.json*. The default version of this configuration file is named *config.json_TEMPLATE*. You may copy config.json_TEMPLATE to config.json initially, or let the automated installation process do it for you (see the autoinstall repo). The common section of the configuration file contains common parameters for all servers. The remaining sections are application-specific parameters. Create the initial config.json file, then add the values for your environment. The config.json file is ignored by Git, so doing a ```git pull``` will not overwrite your existing config.json file.
+All ACE Direct servers use a global JSON configuration file named *config.json*. The default version of this configuration file is named *config.json_TEMPLATE*. You may copy config.json_TEMPLATE to config.json initially, or let the automated installation process do it for you (see the autoinstall repo). The common section of the configuration file contains common parameters for all servers. The remaining sections are application-specific parameters. Create the initial config.json file, then add the values for your environment. Use parameter_desc.json as a reference for choosing the appropriate configuration values. The config.json file is ignored by Git, so doing a ```git pull``` will not overwrite your existing config.json file.
 
 ## parameter_desc.json
 
-The purpose of the *parameter_desc.json* file is to document each parameter in the global configuration file. It has the same structure as *config.json_TEMPLATE*, but the values are descriptions of each parameter. This file must be maintained along with *config.json_TEMPLATE*.
-
-## parameter_desc.json
-
-This JSON file mirrors config.json_TEMPLATE. It is for documentation purposes only. The parameter names are the same. The parameter values are the descriptions of the fields. This file must must be maintained along with config.json_TEMPLATE.
+The purpose of the *parameter_desc.json* file is to document each parameter in the global configuration file. This file serves as a reference for completing the configuration process. It has the same structure as *config.json_TEMPLATE*, but the values are descriptions of each parameter. This file must be maintained along with *config.json_TEMPLATE*.
 
 ## color_config.json_TEMPLATE and default_color_config.json_TEMPLATE
 
