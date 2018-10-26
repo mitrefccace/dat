@@ -92,7 +92,7 @@ CREATE TABLE `asterisk_extensions` (
 
 LOCK TABLES `asterisk_extensions` WRITE;
 /*!40000 ALTER TABLE `asterisk_extensions` DISABLE KEYS */;
-INSERT INTO `asterisk_extensions` VALUES (1,6001,'EXTENSION_PASSWORD'),(2,6002,'EXTENSION_PASSWORD'),(3,6003,'EXTENSION_PASSWORD'),(4,30001,'EXTENSION_PASSWORD'),(5,30002,'EXTENSION_PASSWORD'),(6,30003,'EXTENSION_PASSWORD'),(7,30004,'EXTENSION_PASSWORD'),(8,30005,'EXTENSION_PASSWORD'),(9,30006,'EXTENSION_PASSWORD'),(10,30007,'EXTENSION_PASSWORD'),(11,30008,'EXTENSION_PASSWORD'),(12,30009,'EXTENSION_PASSWORD'),(13,30010,'EXTENSION_PASSWORD'),(14,30011,'EXTENSION_PASSWORD'),(15,30012,'EXTENSION_PASSWORD'),(16,30013,'EXTENSION_PASSWORD'),(17,30014,'EXTENSION_PASSWORD'),(18,30015,'EXTENSION_PASSWORD'),(19,30016,'EXTENSION_PASSWORD'),(20,30017,'EXTENSION_PASSWORD'),(21,30018,'EXTENSION_PASSWORD'),(22,30019,'EXTENSION_PASSWORD'),(23,30020,'EXTENSION_PASSWORD'),(24,0,NULL);
+INSERT INTO `asterisk_extensions` VALUES (1,6001,'_EXTENSION_PASSWORD_'),(2,6002,'_EXTENSION_PASSWORD_'),(3,6003,'_EXTENSION_PASSWORD_'),(4,30001,'_EXTENSION_PASSWORD_'),(5,30002,'_EXTENSION_PASSWORD_'),(6,30003,'_EXTENSION_PASSWORD_'),(7,30004,'_EXTENSION_PASSWORD_'),(8,30005,'_EXTENSION_PASSWORD_'),(9,30006,'_EXTENSION_PASSWORD_'),(10,30007,'_EXTENSION_PASSWORD_'),(11,30008,'_EXTENSION_PASSWORD_'),(12,30009,'_EXTENSION_PASSWORD_'),(13,30010,'_EXTENSION_PASSWORD_'),(14,30011,'_EXTENSION_PASSWORD_'),(15,30012,'_EXTENSION_PASSWORD_'),(16,30013,'_EXTENSION_PASSWORD_'),(17,30014,'_EXTENSION_PASSWORD_'),(18,30015,'_EXTENSION_PASSWORD_'),(19,30016,'_EXTENSION_PASSWORD_'),(20,30017,'_EXTENSION_PASSWORD_'),(21,30018,'_EXTENSION_PASSWORD_'),(22,30019,'_EXTENSION_PASSWORD_'),(23,30020,'_EXTENSION_PASSWORD_'),(24,0,NULL);
 /*!40000 ALTER TABLE `asterisk_extensions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -231,6 +231,14 @@ CREATE TABLE `user_data` (
 LOCK TABLES `user_data` WRITE;
 /*!40000 ALTER TABLE `user_data` DISABLE KEYS */;
 INSERT INTO `user_data` VALUES (1111111111,'ghopper','aaa111','Grace','Hopper','1 Programming Way','Beverly Hills','CA','90210','ghopper@mail.com',0);
+INSERT INTO `user_data` VALUES (2222222222,'dvaughan','aaa222','Dorothy','Vaughan','2 Programming Way','Beverly Hills','CA','90210','dvaughan@mail.com',0);
+INSERT INTO `user_data` VALUES (3333333333,'mjackson','aaa333','Mary','Jackson','3 Programming Way','Beverly Hills','CA','90210','mjackson@mail.com',0);
+INSERT INTO `user_data` VALUES (4444444444,'kjohnson','aaa444','Katherine','Johnson','4 Programming Way','Beverly Hills','CA','90210','kjohnson@mail.com',0);
+INSERT INTO `user_data` VALUES (5555555555,'alovelace','aaa555','Ada','Lovelace','5 Programming Way','Beverly Hills','CA','90210','alovelace@mail.com',0);
+INSERT INTO `user_data` VALUES (6666666666,'mmeltzer','aaa666','Marlyn','Meltzer','6 Programming Way','Beverly Hills','CA','90210','mmeltzer@mail.com',0);
+INSERT INTO `user_data` VALUES (7777777777,'bholberton','aaa777','Betty','Holberton','7 Programming Way','Beverly Hills','CA','90210','bholberton@mail.com',0);
+INSERT INTO `user_data` VALUES (8888888888,'katonelli','aaa888','Kathleen','Antonelli','8 Programming Way','Beverly Hills','CA','90210','kantonelli@mail.com',0);
+INSERT INTO `user_data` VALUES (9999999999,'rteitelbaum','aaa999','Ruth','Teitelbaum','9 Programming Way','Beverly Hills','CA','90210','rteitelbaum@mail.com',0);
 /*!40000 ALTER TABLE `user_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,11 +292,12 @@ UNLOCK TABLES;
 -- Create acedirect and asterisk users and set appropriate permissions.
 -- For security, the acedirect user only gets read access to the CDR table.
 
-CREATE USER `asterisk`@`%` IDENTIFIED BY `_ASTERISK_PASSWORD_`;GRANT ALL PRIVILEGES ON `asterisk`.* TO `username`@`%` ;
+CREATE USER 'acedirect'@'%' IDENTIFIED BY '_ACEDIRECT_PASSWORD_';
+CREATE USER 'asterisk'@'%' IDENTIFIED BY '_ASTERISK_PASSWORD_';
 
-CREATE USER `acedirect`@`%` IDENTIFIED BY `_ACEDIRECT_PASSWORD_`;GRANT ALL PRIVILEGES ON *.* TO `acedirect`@`%`;
-
-GRANT SELECT ON `asterisk`.* to `acedirect`@`%`;
+GRANT ALL PRIVILEGES ON acedirect.* TO 'acedirect'@'%';
+GRANT ALL PRIVILEGES ON asterisk.* TO 'asterisk'@'%' ;
+GRANT SELECT ON asterisk.* to 'acedirect'@'%';
 
 FLUSH PRIVILEGES;
 

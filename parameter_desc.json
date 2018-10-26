@@ -11,13 +11,6 @@
       "private_key": "Full path to the private key file"
     }
   },
-  "zendesk": {
-    "private_ip": "IP address of the zendesk/fendesk server",
-    "port": "Port number of the zendesk/fendesk server",
-    "protocol": "Use http for zendesk, https for fendesk",
-    "user_id": "email address of the zendesk user",
-    "token": "token of the zendesk user"
-  },
   "asterisk": {
     "sip": {
       "public": "Fully qualified domain name of the Asterisk server",
@@ -46,26 +39,8 @@
       }
     }
   },
-  "ace_direct": {
-    "https_listen_port": "Port that the ACE Direct portal listens on"
-  },
-  "acr_cdr": {
-    "https_listen_port": "Port that the ACR CDR portal listens on"
-  },
-  "management_portal": {
-    "https_listen_port": "Port that the Management Portal listens on",
-    "queues" : "Comma-separated values of the Asterisk queues",
-    "poll_interval" : "Poll frequency (seconds) of the Management Portal statistics"
-  },
   "videomail": {
     "max_record_secs": "Maximum time (seconds) for a video mail"
-  },
-  "user_service": {
-    "port": "Port number of the USERVER server",
-    "itrs_mode": "Use ITRS to verify numbers? true|false"
-  },
-  "agent_service": {
-    "port": "Port number of the ASERVER server"
   },
   "web_security": {
     "json_web_token": {
@@ -83,17 +58,6 @@
       "rolling": "Rolling? true or false",
       "max_age": "Max. age: 2400000"
     }
-  },
-  "nginx": {
-    "fqdn": "Fully qualified domain name of this server",
-    "private_ip": "Private IP address of the nginx server",
-    "port": "NGINX server port number"
-  },
-  "openam": {
-    "fqdn": "Fully qualified domain name of the openam server",
-    "private_ip": "Private IP address of the openam server",
-    "port": "OpenAM server port number",
-    "path": "OpenAM web path"
   },
   "database_servers": {
     "mysql": {
@@ -122,14 +86,58 @@
   "popticket": {
     "url": "URL of zendesk pop ticket; omit this field to skip zendesk pop"
   },
+  "skinny_mode" : {
+    "agent": "Enable skinny mode for agent portal: true or false",
+    "consumer": "Enable skinny mode for consumer portal: true or false"
+  },
+  "openam": {
+    "fqdn": "Fully qualified domain name of the openam server",
+    "private_ip": "Private IP address of the openam server",
+    "port": "OpenAM server port number",
+    "path": "OpenAM web path",
+    "user": "openAM admin user name",
+    "password": "openAM admin password"
+  },
+  "nginx": {
+    "fqdn": "Fully qualified domain name of this server",
+    "ad_path": "NGINX path for agent/consumer portals",
+    "mp_path": "NGINX path for management portal",
+    "private_ip": "Private IP address of the nginx server",
+    "port": "NGINX server port number"
+  },
+  "ace_direct": {
+    "https_listen_port": "Port that the ACE Direct portal listens on"
+  },
+  "management_portal": {
+    "https_listen_port": "Port that the Management Portal listens on",
+    "queues" : "Comma-separated values of the Asterisk queues",
+    "poll_interval" : "Poll frequency (seconds) of the Management Portal statistics"
+  },
+  "zendesk": {
+    "private_ip": "IP address of the zendesk/fendesk server",
+    "port": "Port number of the zendesk/fendesk server",
+    "protocol": "Use http for zendesk, https for fendesk",
+    "user_id": "email address of the zendesk user",
+    "token": "token of the zendesk user"
+  },
+  "acr_cdr": {
+    "https_listen_port": "Port that the ACR CDR portal listens on"
+  },
+  "user_service": {
+    "port": "Port number of the USERVER server",
+    "itrs_mode": "Use ITRS to verify numbers? true|false"
+  },
+  "agent_service": {
+    "port": "Port number of the ASERVER server"
+  },
+  "multi_service": {
+    "port": "Port number for MSERVER server",
+    "itrs_mode": "Use ITRS to verify numbers? true|false"
+  },
   "virtual_agent": {
     "port": "Virtual Agent portal port",
     "videomail": {
       "number": "Asterisk dial-in number for videomail queue"
     }
-  },
-  "skinny_mode" : {
-    "agent": "Enable skinny mode for agent portal: true or false",
-    "consumer": "Enable skinny mode for consumer portal: true or false"
   }
 }

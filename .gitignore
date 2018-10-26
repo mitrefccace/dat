@@ -1,2 +1,3 @@
 config*.json
-process.json
+process*.json
+*.swp
