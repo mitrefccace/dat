@@ -1,0 +1,144 @@
+{
+  "common": {
+    "cleartext": "true",
+    "version":"3.2",
+    "year":"2019",
+    "debug_level": "ERROR",
+    "fqdn": "host.machine.com",
+    "private_ip": "0.0.0.0",
+    "https": {
+      "certificate": "/etc/ssl/cert.pem",
+      "private_key": "/etc/ssl/key.pem"
+    }
+  },
+  "asterisk": {
+    "sip": {
+      "public": "asteriskhost.domain.com",
+      "private_ip": "private asterisk IP",
+      "stun": "stunhost.domain.com",
+      "stun_port": "3478",
+      "ws_port": "443",
+      "channel": "SIP"
+    },
+    "ami": {
+      "id": "asterisk-ami-id",
+      "passwd": "asterisk-ami-password",
+      "port": "5038"
+    },
+    "extensions": {
+      "start_number": "90001",
+      "end_number": "90005",
+      "secret": "<password>"
+    },
+    "queues": {
+      "complaint": {
+        "number": "000000"
+      },
+      "videomail": {
+        "number": "000000"
+      }
+    }
+  },
+  "videomail": {
+    "max_record_secs": "90"
+  },
+  "web_security": {
+    "json_web_token": {
+      "encoding": "base64",
+      "secret_key": "someKey",
+      "timeout": "15000",
+      "handshake": "true"
+    },
+    "session": {
+      "secret_key": "someSecretKey",
+      "resave": "true",
+      "save_uninitialized": "true",
+      "secure": "true",
+      "http_only": "true",
+      "rolling": "true",
+      "max_age": "2400000"
+    }
+  },
+  "database_servers": {
+    "mysql": {
+      "host": "0.0.0.0",
+      "port": "3306",
+      "user": "dbuser",
+      "password": "dbpass",
+      "ad_database_name": "ace direct db name",
+      "cdr_database_name": "cdr db name",
+      "cdr_table_name": "cdr table name"
+    },
+    "redis": {
+      "host": "127.0.0.1",
+      "port": "6379",
+      "auth": "NotUsedInDevEnvironment"
+    },
+    "mongodb": {
+      "connection_uri": "mongodb://localhost:27017/test",
+      "caption_database_name": "caption_db",
+      "caption_collection_name": "captions",
+      "logAMIevents": false,
+      "logStats": false,
+      "logStatsFreq": 60
+    }
+  },
+  "complaint_redirect": {
+    "active": "true",
+    "desc": "Landing Page",
+    "url": "./logout"
+  },
+  "popticket": {
+    "url": "https://xxxxxx.xxxxxxxxxxx.com/CDC_CustZD_Test/DTK_HttpServices/json/CallDTKEventUsingJSONviaPOSTStream?async=true"
+  },
+  "skinny_mode" : {
+    "agent": true,
+    "consumer": true
+  },
+  "openam": {
+    "fqdn": "openam.domain.com",
+    "private_ip": "0.0.0.0",
+    "port": "443",
+    "path": "ace",
+    "user": "adminLogin",
+    "password": "adminPassword"
+  },
+  "nginx": {
+    "fqdn": "host.machine.com",
+    "private_ip": "0.0.0.0",
+    "port": "443",
+    "ad_path": "/ACEDirect",
+    "mp_path": "/ManagementPortal"
+  },
+  "ace_direct": {
+    "https_listen_port": "8005"
+  },
+  "management_portal": {
+    "https_listen_port": "9000",
+    "queues" : "GeneralQuestionsQueue,ComplaintsQueue,MailQueue",
+    "poll_interval" : "2000"
+  },
+  "zendesk": {
+    "private_ip": "0.0.0.0",
+    "port": "1234",
+    "protocol": "https",
+    "user_id": "user@email.com",
+    "token": "userToken"
+  },
+  "acr_cdr": {
+    "https_listen_port": "8086"
+  },
+  "user_service": {
+    "port": "8082",
+    "itrs_mode": "false"
+  },
+  "agent_service": {
+    "port": "8085"
+  },
+  "virtual_agent": {
+    "port": "8081",
+    "videomail": {
+      "number": "111111"
+    }
+  }
+}

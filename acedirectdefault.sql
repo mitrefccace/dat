@@ -16,6 +16,10 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
+-- create fopenam databse
+
+CREATE DATABASE IF NOT EXISTS fopenam;
+
 -- create asterisk databse
 
 CREATE DATABASE IF NOT EXISTS asterisk; USE asterisk;

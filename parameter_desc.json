@@ -76,6 +76,11 @@
     },
     "mongodb": {
       "connection_uri": "Mongo DB connection URI; leave blank to disable"
+      "caption_database_name": "database to log captions to",
+      "caption_collection_name": "collection to log captions to",
+      "logAMIevents": "true/false - log AMI events",
+      "logStats": "true/false - log stats",
+      "logStatsFreq": "frequency(seconds) to log stats" 
     }
   },
   "complaint_redirect": {
