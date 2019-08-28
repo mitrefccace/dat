@@ -92,8 +92,8 @@
     "url": "https://xxxxxx.xxxxxxxxxxx.com/CDC_CustZD_Test/DTK_HttpServices/json/CallDTKEventUsingJSONviaPOSTStream?async=true"
   },
   "skinny_mode" : {
-    "agent": true,
-    "consumer": true
+    "agent": false,
+    "consumer": false
   },
   "openam": {
     "fqdn": "openam.domain.com",
