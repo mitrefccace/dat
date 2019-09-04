@@ -95,6 +95,10 @@
     "agent": "Enable skinny mode for agent portal: true or false",
     "consumer": "Enable skinny mode for consumer portal: true or false"
   },
+  "caption_mode" : {
+    "agent": "Enable captions for the agent portal",
+    "consumer" : "Enable captions for the consumer portal" 
+  },
   "openam": {
     "fqdn": "Fully qualified domain name of the openam server",
     "private_ip": "Private IP address of the openam server",

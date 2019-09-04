@@ -89,11 +89,15 @@
     "url": "./logout"
   },
   "popticket": {
-    "url": "https://xxxxxx.xxxxxxxxxxx.com/CDC_CustZD_Test/DTK_HttpServices/json/CallDTKEventUsingJSONviaPOSTStream?async=true"
+    "url": "https://FQDN:PORT/DTK_HttpServices/json/CallDTKEventUsingJSONviaPOSTStream?async=true"
   },
   "skinny_mode" : {
     "agent": false,
-    "consumer": false
+    "consumer":false 
+  },
+  "caption_mode" : {
+    "agent": true,
+    "consumer" : true
   },
   "openam": {
     "fqdn": "openam.domain.com",
