@@ -100,9 +100,9 @@
     "consumer" : "Enable captions for the consumer portal" 
   },
   "openam": {
-    "fqdn": "Fully qualified domain name of the openam server",
-    "private_ip": "Private IP address of the openam server",
-    "port": "OpenAM server port number",
+    "fqdn": "Fully qualified domain name of the NGINX server",
+    "private_ip": "Private IP address of the NGINX server",
+    "port": "NGINX server port number",
     "path": "OpenAM web path",
     "user": "openAM admin user name",
     "password": "openAM admin password"

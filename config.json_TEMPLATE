@@ -115,32 +115,32 @@
     "mp_path": "/ManagementPortal"
   },
   "ace_direct": {
-    "https_listen_port": "8005"
+    "https_listen_port": "9001"
   },
   "management_portal": {
-    "https_listen_port": "9000",
+    "https_listen_port": "9002",
     "queues" : "GeneralQuestionsQueue,ComplaintsQueue,MailQueue",
     "poll_interval" : "2000"
   },
   "zendesk": {
     "private_ip": "0.0.0.0",
-    "port": "1234",
+    "port": "9003",
     "protocol": "https",
     "user_id": "user@email.com",
     "token": "userToken"
   },
   "acr_cdr": {
-    "https_listen_port": "8086"
+    "https_listen_port": "9004"
   },
   "user_service": {
-    "port": "8082",
+    "port": "9005",
     "itrs_mode": "false"
   },
   "agent_service": {
-    "port": "8085"
+    "port": "9006"
   },
   "virtual_agent": {
-    "port": "8081",
+    "port": "9007",
     "videomail": {
       "number": "111111"
     }
