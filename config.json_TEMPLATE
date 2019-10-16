@@ -80,7 +80,7 @@
       "caption_collection_name": "captions",
       "logAMIevents": false,
       "logStats": false,
-      "logStatsFreq": 60
+      "logStatsFreq": 60000
     }
   },
   "complaint_redirect": {
