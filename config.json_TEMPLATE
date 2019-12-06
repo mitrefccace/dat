@@ -112,7 +112,9 @@
     "private_ip": "0.0.0.0",
     "port": "443",
     "ad_path": "/ACEDirect",
-    "mp_path": "/ManagementPortal"
+    "mp_path": "/ManagementPortal",
+    "agent_route": "/agent",
+    "consumer_route": "/call"
   },
   "ace_direct": {
     "https_listen_port": "9001"
@@ -144,5 +146,9 @@
     "videomail": {
       "number": "111111"
     }
+  }
+  "extensions": {
+    "complaint" : "call",
+    "agent" : "agent"
   }
 }

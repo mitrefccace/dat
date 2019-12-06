@@ -112,7 +112,9 @@
     "ad_path": "NGINX path for agent/consumer portals",
     "mp_path": "NGINX path for management portal",
     "private_ip": "Private IP address of the nginx server",
-    "port": "NGINX server port number"
+    "port": "NGINX server port number",
+    "agent_route" : "URL route for agent portal",
+    "consumer_route" : "URL route for consumer portal"
   },
   "ace_direct": {
     "https_listen_port": "Port that the ACE Direct portal listens on"
