@@ -145,6 +145,9 @@
     "port": "Port number for MSERVER server",
     "itrs_mode": "Use ITRS to verify numbers? true|false"
   },
+  "busylight": {
+    "enabled": "boolean string (true/false) that enables or disables the busylight in ACE Direct"
+  },
   "virtual_agent": {
     "port": "Virtual Agent portal port",
     "videomail": {

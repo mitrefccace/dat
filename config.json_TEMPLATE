@@ -146,9 +146,8 @@
     "videomail": {
       "number": "111111"
     }
-  }
-  "extensions": {
-    "complaint" : "call",
-    "agent" : "agent"
+  },
+  "busylight": {
+    "enabled": "true"
   }
 }
