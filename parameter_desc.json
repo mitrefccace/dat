@@ -39,6 +39,13 @@
       }
     }
   },
+<<<<<<< HEAD
+=======
+  "signaling_server": {
+      "public": "Fully qualified domain name of the signaling server:port number",
+      "proto": "ws or wss"
+  },
+>>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   "videomail": {
     "max_record_secs": "Maximum time (seconds) for a video mail"
   },
@@ -75,12 +82,21 @@
       "port": "Redis server port"
     },
     "mongodb": {
+<<<<<<< HEAD
       "connection_uri": "Mongo DB connection URI; leave blank to disable"
       "caption_database_name": "database to log captions to",
       "caption_collection_name": "collection to log captions to",
       "logAMIevents": "true/false  boolean value - log AMI events",
       "logStats": "true/false boolean value - log stats",
       "logStatsFreq": "frequency(milliseconds) to log stats" 
+=======
+      "connection_uri": "Mongo DB connection URI; leave blank to disable",
+      "caption_database_name": "database to log captions to",
+      "caption_collection_name": "collection to log captions to",
+      "logAMIevents": "true/false boolean - log AMI events",
+      "logStats": "true/false boolean - log stats",
+      "logStatsFreq": "frequency(milliseconds) to log stats"
+>>>>>>> b252753ec620539757c88cfe7672eec8fe025087
     }
   },
   "complaint_redirect": {
@@ -97,7 +113,11 @@
   },
   "caption_mode" : {
     "agent": "Enable captions for the agent portal",
+<<<<<<< HEAD
     "consumer" : "Enable captions for the consumer portal" 
+=======
+    "consumer" : "Enable captions for the consumer portal"
+>>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   },
   "openam": {
     "fqdn": "Fully qualified domain name of the NGINX server",
@@ -113,8 +133,13 @@
     "mp_path": "NGINX path for management portal",
     "private_ip": "Private IP address of the nginx server",
     "port": "NGINX server port number",
+<<<<<<< HEAD
     "agent_route" : "URL route for agent portal",
     "consumer_route" : "URL route for consumer portal"
+=======
+    "agent_route": "Used for agent portal url",
+    "consumer_route": "Used for consumer portal url"
+>>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   },
   "ace_direct": {
     "https_listen_port": "Port that the ACE Direct portal listens on"

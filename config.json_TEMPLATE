@@ -39,6 +39,16 @@
       }
     }
   },
+<<<<<<< HEAD
+=======
+  "signaling_server": {
+      "public": "sigserver.domain.com:port",
+      "proto": "wss"
+  },
+  "media_server": {
+      "privacy_video_url": "file:///tmp/media/videoPrivacy.webm"
+  },
+>>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   "videomail": {
     "max_record_secs": "90"
   },
@@ -93,7 +103,11 @@
   },
   "skinny_mode" : {
     "agent": false,
+<<<<<<< HEAD
     "consumer":false 
+=======
+    "consumer": false
+>>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   },
   "caption_mode" : {
     "agent": true,
@@ -122,7 +136,8 @@
   "management_portal": {
     "https_listen_port": "9002",
     "queues" : "GeneralQuestionsQueue,ComplaintsQueue,MailQueue",
-    "poll_interval" : "2000"
+    "poll_interval" : "2000",
+    "force_logout_password": "super_secure_password"
   },
   "zendesk": {
     "private_ip": "0.0.0.0",
@@ -149,5 +164,12 @@
   },
   "busylight": {
     "enabled": "true"
+<<<<<<< HEAD
+=======
+  },
+  "multi_service": {
+    "port": "9008",
+    "itrs_mode": "false"
+>>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   }
 }
