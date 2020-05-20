@@ -1,7 +1,7 @@
 {
   "common": {
     "cleartext": "true",
-    "version":"3.2",
+    "version":"3.1",
     "year":"2019",
     "debug_level": "ERROR",
     "fqdn": "host.machine.com",
@@ -39,8 +39,6 @@
       }
     }
   },
-<<<<<<< HEAD
-=======
   "signaling_server": {
       "public": "sigserver.domain.com:port",
       "proto": "wss"
@@ -48,7 +46,6 @@
   "media_server": {
       "privacy_video_url": "file:///tmp/media/videoPrivacy.webm"
   },
->>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   "videomail": {
     "max_record_secs": "90"
   },
@@ -89,6 +86,7 @@
       "caption_database_name": "caption_db",
       "caption_collection_name": "captions",
       "logAMIevents": false,
+	  "logCallData": false,
       "logStats": false,
       "logStatsFreq": 60000
     }
@@ -103,11 +101,7 @@
   },
   "skinny_mode" : {
     "agent": false,
-<<<<<<< HEAD
-    "consumer":false 
-=======
     "consumer": false
->>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   },
   "caption_mode" : {
     "agent": true,
@@ -164,12 +158,9 @@
   },
   "busylight": {
     "enabled": "true"
-<<<<<<< HEAD
-=======
   },
   "multi_service": {
     "port": "9008",
     "itrs_mode": "false"
->>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   }
 }
