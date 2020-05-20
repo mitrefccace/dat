@@ -56,14 +56,6 @@
     "restart_delay": 5000,
     "out_file": "./logs/pm2-server-db.log",
     "error_file": "./logs/pm2-server-db-error.log"
-  },
-  {
-    "name": "Virtual Agent",
-    "cwd": "/home/centos/virtualagent",
-    "restart_delay": 5000,
-    "script": "./bin/www",
-    "error_file": "./logs/virtual_agent_error.log",
-    "out_file": "./logs/virtual_agent.log"
   }
 ]
 }
