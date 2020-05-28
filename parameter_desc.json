@@ -146,7 +146,8 @@
     "itrs_mode": "Use ITRS to verify numbers? true|false"
   },
   "busylight": {
-    "enabled": "boolean string (true/false) that enables or disables the busylight in ACE Direct"
+    "enabled": "boolean string (true/false) that enables or disables the busylight in ACE Direct",
+    "awayBlink": "boolean string (true/false) that enables blinking while Away, if callers are in queue"
   },
   "virtual_agent": {
     "port": "Virtual Agent portal port",

@@ -148,6 +148,7 @@
     }
   },
   "busylight": {
-    "enabled": "true"
+    "enabled": "true",
+    "awayBlink": "true"
   }
 }
