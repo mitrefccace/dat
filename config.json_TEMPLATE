@@ -1,7 +1,7 @@
 {
   "common": {
     "cleartext": "true",
-    "version":"3.2",
+    "version":"3.1",
     "year":"2019",
     "debug_level": "ERROR",
     "fqdn": "host.machine.com",
@@ -39,16 +39,13 @@
       }
     }
   },
-<<<<<<< HEAD
-=======
   "signaling_server": {
-      "public": "sigserver.domain.com:port",
-      "proto": "wss"
+      "public": "sigserver.domain.com",
+      "port": 8443
   },
   "media_server": {
       "privacy_video_url": "file:///tmp/media/videoPrivacy.webm"
   },
->>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   "videomail": {
     "max_record_secs": "90"
   },
@@ -90,7 +87,7 @@
       "caption_collection_name": "captions",
       "logAMIevents": false,
       "logStats": false,
-      "logStatsFreq": 60000
+      "logStatsFreq": 60
     }
   },
   "complaint_redirect": {
@@ -99,19 +96,11 @@
     "url": "./logout"
   },
   "popticket": {
-    "url": "https://FQDN:PORT/DTK_HttpServices/json/CallDTKEventUsingJSONviaPOSTStream?async=true"
+    "url": "https://xxxxxx.xxxxxxxxxxx.com/CDC_CustZD_Test/DTK_HttpServices/json/CallDTKEventUsingJSONviaPOSTStream?async=true"
   },
   "skinny_mode" : {
-    "agent": false,
-<<<<<<< HEAD
-    "consumer":false 
-=======
-    "consumer": false
->>>>>>> b252753ec620539757c88cfe7672eec8fe025087
-  },
-  "caption_mode" : {
     "agent": true,
-    "consumer" : true
+    "consumer": true
   },
   "openam": {
     "fqdn": "openam.domain.com",
@@ -126,50 +115,41 @@
     "private_ip": "0.0.0.0",
     "port": "443",
     "ad_path": "/ACEDirect",
-    "mp_path": "/ManagementPortal",
-    "agent_route": "/agent",
-    "consumer_route": "/call"
+    "mp_path": "/ManagementPortal"
   },
   "ace_direct": {
-    "https_listen_port": "9001"
+    "https_listen_port": "8005"
   },
   "management_portal": {
-    "https_listen_port": "9002",
+    "https_listen_port": "9000",
     "queues" : "GeneralQuestionsQueue,ComplaintsQueue,MailQueue",
-    "poll_interval" : "2000",
-    "force_logout_password": "super_secure_password"
+    "poll_interval" : "2000"
   },
   "zendesk": {
     "private_ip": "0.0.0.0",
-    "port": "9003",
+    "port": "1234",
     "protocol": "https",
     "user_id": "user@email.com",
     "token": "userToken"
   },
   "acr_cdr": {
-    "https_listen_port": "9004"
+    "https_listen_port": "8086"
   },
   "user_service": {
-    "port": "9005",
+    "port": "8082",
     "itrs_mode": "false"
   },
   "agent_service": {
-    "port": "9006"
+    "port": "8085"
+  },
+  "multi_service": {
+    "port": "8083",
+    "itrs_mode": "false"
   },
   "virtual_agent": {
-    "port": "9007",
+    "port": "8081",
     "videomail": {
       "number": "111111"
     }
-  },
-  "busylight": {
-    "enabled": "true"
-<<<<<<< HEAD
-=======
-  },
-  "multi_service": {
-    "port": "9008",
-    "itrs_mode": "false"
->>>>>>> b252753ec620539757c88cfe7672eec8fe025087
   }
 }
