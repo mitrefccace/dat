@@ -40,8 +40,10 @@
     }
   },
   "signaling_server": {
-      "public": "sigserver.domain.com",
-      "port": 8443
+      "proto": "wss",
+      "public": "some.domain.com",
+      "port": 1234,
+      "dev_url": ""
   },
   "media_server": {
       "privacy_video_url": "file:///tmp/media/videoPrivacy.webm"
@@ -86,8 +88,9 @@
       "caption_database_name": "caption_db",
       "caption_collection_name": "captions",
       "logAMIevents": false,
+	  "logCallData": false,
       "logStats": false,
-      "logStatsFreq": 60
+      "logStatsFreq": 60000
     }
   },
   "complaint_redirect": {
@@ -96,11 +99,15 @@
     "url": "./logout"
   },
   "popticket": {
-    "url": "https://xxxxxx.xxxxxxxxxxx.com/CDC_CustZD_Test/DTK_HttpServices/json/CallDTKEventUsingJSONviaPOSTStream?async=true"
+    "url": "https://FQDN:PORT/DTK_HttpServices/json/CallDTKEventUsingJSONviaPOSTStream?async=true"
   },
   "skinny_mode" : {
+    "agent": false,
+    "consumer": false
+  },
+  "caption_mode" : {
     "agent": true,
-    "consumer": true
+    "consumer" : true
   },
   "openam": {
     "fqdn": "openam.domain.com",
@@ -115,41 +122,48 @@
     "private_ip": "0.0.0.0",
     "port": "443",
     "ad_path": "/ACEDirect",
-    "mp_path": "/ManagementPortal"
+    "mp_path": "/ManagementPortal",
+    "agent_route": "/agent",
+    "consumer_route": "/call"
   },
   "ace_direct": {
-    "https_listen_port": "8005"
+    "https_listen_port": "9001"
   },
   "management_portal": {
-    "https_listen_port": "9000",
+    "https_listen_port": "9002",
     "queues" : "GeneralQuestionsQueue,ComplaintsQueue,MailQueue",
-    "poll_interval" : "2000"
+    "poll_interval" : "2000",
+    "force_logout_password": "super_secure_password"
   },
   "zendesk": {
     "private_ip": "0.0.0.0",
-    "port": "1234",
+    "port": "9003",
     "protocol": "https",
     "user_id": "user@email.com",
     "token": "userToken"
   },
   "acr_cdr": {
-    "https_listen_port": "8086"
+    "https_listen_port": "9004"
   },
   "user_service": {
-    "port": "8082",
+    "port": "9005",
     "itrs_mode": "false"
   },
   "agent_service": {
-    "port": "8085"
-  },
-  "multi_service": {
-    "port": "8083",
-    "itrs_mode": "false"
+    "port": "9006"
   },
   "virtual_agent": {
-    "port": "8081",
+    "port": "9007",
     "videomail": {
       "number": "111111"
     }
+  },
+  "busylight": {
+    "enabled": "true",
+    "awayBlink": "true"
+  },
+  "multi_service": {
+    "port": "9008",
+    "itrs_mode": "false"
   }
 }

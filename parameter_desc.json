@@ -40,8 +40,10 @@
     }
   },
   "signaling_server": {
-      "public": "Fully qualified domain name of the signaling server",
-      "port": "port number for the signaling service"
+      "proto": "protocol (e.g., wss) of signaling server",
+      "public": "FQDN:port of signaling server", 
+      "port": "port number of signaling server",
+      "dev_url": "nginx path of personal signaling server (DEV) or empty string (PROD)"
   },
   "videomail": {
     "max_record_secs": "Maximum time (seconds) for a video mail"
@@ -79,7 +81,13 @@
       "port": "Redis server port"
     },
     "mongodb": {
-      "connection_uri": "Mongo DB connection URI; leave blank to disable"
+      "connection_uri": "Mongo DB connection URI; leave blank to disable",
+      "caption_database_name": "database to log captions to",
+      "caption_collection_name": "collection to log captions to",
+      "logAMIevents": "true/false boolean - log AMI events",
+	  "logCallData": "true/false boolean - log Call Data",
+      "logStats": "true/false boolean - log stats",
+      "logStatsFreq": "frequency(milliseconds) to log stats"
     }
   },
   "complaint_redirect": {
@@ -94,10 +102,14 @@
     "agent": "Enable skinny mode for agent portal: true or false",
     "consumer": "Enable skinny mode for consumer portal: true or false"
   },
+  "caption_mode" : {
+    "agent": "Enable captions for the agent portal",
+    "consumer" : "Enable captions for the consumer portal"
+  },
   "openam": {
-    "fqdn": "Fully qualified domain name of the openam server",
-    "private_ip": "Private IP address of the openam server",
-    "port": "OpenAM server port number",
+    "fqdn": "Fully qualified domain name of the NGINX server",
+    "private_ip": "Private IP address of the NGINX server",
+    "port": "NGINX server port number",
     "path": "OpenAM web path",
     "user": "openAM admin user name",
     "password": "openAM admin password"
@@ -107,7 +119,9 @@
     "ad_path": "NGINX path for agent/consumer portals",
     "mp_path": "NGINX path for management portal",
     "private_ip": "Private IP address of the nginx server",
-    "port": "NGINX server port number"
+    "port": "NGINX server port number",
+    "agent_route": "Used for agent portal url",
+    "consumer_route": "Used for consumer portal url"
   },
   "ace_direct": {
     "https_listen_port": "Port that the ACE Direct portal listens on"
@@ -137,6 +151,10 @@
   "multi_service": {
     "port": "Port number for MSERVER server",
     "itrs_mode": "Use ITRS to verify numbers? true|false"
+  },
+  "busylight": {
+    "enabled": "boolean string (true/false) that enables or disables the busylight in ACE Direct",
+    "awayBlink": "boolean string (true/false) that enables blinking while Away, if callers are in queue"
   },
   "virtual_agent": {
     "port": "Virtual Agent portal port",
