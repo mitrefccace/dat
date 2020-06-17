@@ -2,7 +2,7 @@
   "apps": [{
     "name": "ACE Direct",
     "script": "adserver.js",
-    "cwd": "/home/centos/acedirect",
+    "cwd": "./acedirect",
     "restart_delay": 5000,
     "out_file": "./logs/pm2-adserver.log",
     "error_file": "./logs/pm2-adserver-error.log"
@@ -11,7 +11,7 @@
   {
     "name":"Management Dashboard",
     "script": "server-db.js",
-    "cwd": "/home/centos/managementportal",
+    "cwd": "./managementportal",
     "restart_delay": 5000,
     "out_file": "./logs/pm2-server-db.log",
     "error_file": "./logs/pm2-server-db-error.log"
@@ -19,7 +19,7 @@
   {
     "name":"Fendesk",
     "script": "app.js",
-    "cwd": "/home/centos/fendesk",
+    "cwd": "./fendesk",
     "restart_delay": 5000,
     "out_file": "./logs/pm2-fendesk.log",
     "error_file": "./logs/pm2-fendesk-error.log"
@@ -27,7 +27,7 @@
   {
     "name":"CDR",
     "script": "app.js",
-    "cwd": "/home/centos/acr-cdr",
+    "cwd": "./acr-cdr",
     "restart_delay": 5000,
     "out_file": "./logs/pm2-app.log",
     "error_file": "./logs/pm2-app-error.log"
@@ -35,7 +35,7 @@
   {
     "name":"ASERVER",
     "script": "app.js",
-    "cwd": "/home/centos/aserver",
+    "cwd": "./aserver",
     "restart_delay": 5000,
     "out_file": "./logs/pm2-app.log",
     "error_file": "./logs/pm2-app-error.log"
@@ -43,19 +43,10 @@
   {
     "name":"USERVER",
     "script": "app.js",
-    "cwd": "/home/centos/userver",
+    "cwd": "./userver",
     "restart_delay": 5000,
     "out_file": "./logs/pm2-app.log",
     "error_file": "./logs/pm2-app-error.log"
-  },
-  {
-    "name":"Signaling Server",
-    "script": "npm",
-    "args": "run dev",
-    "cwd": "/home/centos/acedirect-kurento",
-    "restart_delay": 5000,
-    "out_file": "./logs/pm2-server-db.log",
-    "error_file": "./logs/pm2-server-db-error.log"
   }
 ]
 }

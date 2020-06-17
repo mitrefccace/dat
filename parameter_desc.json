@@ -40,8 +40,10 @@
     }
   },
   "signaling_server": {
-      "public": "Fully qualified domain name of the signaling server:port number",
-      "proto": "ws or wss"
+      "proto": "protocol (e.g., wss) of signaling server",
+      "public": "FQDN:port of signaling server", 
+      "port": "port number of signaling server",
+      "dev_url": "nginx path of personal signaling server (DEV) or empty string (PROD)"
   },
   "media_server": {
       "privacy_video_url": "file URL of video privacy video in media server"
@@ -154,7 +156,8 @@
     "itrs_mode": "Use ITRS to verify numbers? true|false"
   },
   "busylight": {
-    "enabled": "boolean string (true/false) that enables or disables the busylight in ACE Direct"
+    "enabled": "boolean string (true/false) that enables or disables the busylight in ACE Direct",
+    "awayBlink": "boolean string (true/false) that enables blinking while Away, if callers are in queue"
   },
   "virtual_agent": {
     "port": "Virtual Agent portal port",

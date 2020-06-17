@@ -40,8 +40,10 @@
     }
   },
   "signaling_server": {
-      "public": "sigserver.domain.com:port",
-      "proto": "wss"
+      "proto": "wss",
+      "public": "some.domain.com",
+      "port": 1234,
+      "dev_url": ""
   },
   "media_server": {
       "privacy_video_url": "file:///tmp/media/videoPrivacy.webm"
@@ -157,7 +159,8 @@
     }
   },
   "busylight": {
-    "enabled": "true"
+    "enabled": "true",
+    "awayBlink": "true"
   },
   "multi_service": {
     "port": "9008",
