@@ -39,6 +39,12 @@
       }
     }
   },
+  "proxy_server": {
+      "proto": "wss",
+      "public": "some.domain.com",
+      "port": 443,
+      "path": "/ws"
+  },
   "signaling_server": {
       "proto": "wss",
       "public": "some.domain.com",
