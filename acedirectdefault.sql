@@ -16,6 +16,21 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
+-- IMPORTANT!!!
+-- RUN THIS SCRIPT AS the root USER
+
+-- PREREQUISITES:
+-- Globally replace _EXTENSION_PASSWORD_
+-- Globally replace _ACEDIRECT_PASSWORD_
+-- Globally replace _ASTERISK_PASSWORD_ 
+-- Globally replace _MEDIASERVER_PASSWORD_
+-- Users are: acedirect , asterisk, media_server
+
+
+-- create media server database
+
+CREATE DATABASE IF NOT EXISTS media_server;
+
 -- create fopenam databse
 
 CREATE DATABASE IF NOT EXISTS fopenam;
@@ -298,9 +313,11 @@ UNLOCK TABLES;
 
 CREATE USER 'acedirect'@'%' IDENTIFIED BY '_ACEDIRECT_PASSWORD_';
 CREATE USER 'asterisk'@'%' IDENTIFIED BY '_ASTERISK_PASSWORD_';
+CREATE USER 'media_server'@'%' IDENTIFIED BY '_MEDIASERVER_PASSWORD_'; 
 
 GRANT ALL PRIVILEGES ON acedirect.* TO 'acedirect'@'%';
 GRANT ALL PRIVILEGES ON asterisk.* TO 'asterisk'@'%' ;
+GRANT ALL PRIVILEGES ON media_server.* TO 'media_server'@'%';
 GRANT SELECT ON asterisk.* to 'acedirect'@'%';
 
 FLUSH PRIVILEGES;
