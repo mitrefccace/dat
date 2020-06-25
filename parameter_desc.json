@@ -39,12 +39,6 @@
       }
     }
   },
-  "proxy_server": {
-      "proto": "protocol of proxy server (e.g., wss)",
-      "public": "FQDN of proxy server",
-      "port": "port of proxy server",
-      "path": "path of proxy server (e.g., /ws)"
-  },
   "signaling_server": {
       "proto": "protocol (e.g., wss) of signaling server",
       "public": "FQDN:port of signaling server", 
