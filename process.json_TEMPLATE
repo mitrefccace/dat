@@ -47,6 +47,15 @@
     "restart_delay": 5000,
     "out_file": "./logs/pm2-app.log",
     "error_file": "./logs/pm2-app-error.log"
+  },
+  {
+    "name":"Signaling Server",
+    "script": "npm",
+    "args": "run dev",
+    "cwd": "./acedirect-kurento",
+    "restart_delay": 5000,
+    "out_file": "./logs/pm2-server-db.log",
+    "error_file": "./logs/pm2-server-db-error.log"
   }
 ]
 }

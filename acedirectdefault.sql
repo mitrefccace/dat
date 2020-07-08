@@ -168,6 +168,19 @@ INSERT INTO `asterisk_queues` VALUES (1,'ComplaintsQueue'),(2,'GeneralQuestionsQ
 UNLOCK TABLES;
 
 --
+-- Table structure for table 'call_block'
+--
+
+DROP TABLE IF EXISTS `call_block`;
+CREATE TABLE `call_block` (
+  `call_block_id` int(11) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  `vrs` bigint(20),
+  `admin_username` varchar(255),
+  `reason` varchar(255),
+  `timeUpdated` datetime
+);
+
+--
 -- Table structure for table `outgoing_channels`
 --
 
