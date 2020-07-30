@@ -39,6 +39,12 @@
       }
     }
   },
+  "proxy_server": {
+      "proto": "protocol (e.g., wss) of SIP proxy server",
+      "public": "FQDN of SIP proxy server",
+      "port": "port number of SIP proxy server, (e.g., 443)",
+      "path": "path of SIP proxy server (e.g., /ws)"
+  },
   "signaling_server": {
       "proto": "protocol (e.g., wss) of signaling server",
       "public": "FQDN:port of signaling server", 
