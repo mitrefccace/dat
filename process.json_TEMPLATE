@@ -50,8 +50,7 @@
   },
   {
     "name":"Signaling Server",
-    "script": "npm",
-    "args": "run dev",
+    "script": "src/index.js",
     "cwd": "./acedirect-kurento",
     "restart_delay": 5000,
     "out_file": "./logs/pm2-server-db.log",
