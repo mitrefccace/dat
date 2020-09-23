@@ -34,3 +34,4 @@ After installing MySQL, you can import the database and user config with the fol
 
 Finally, update your ~/dat/config.json file to point to this ACE Direct database.
 
+
