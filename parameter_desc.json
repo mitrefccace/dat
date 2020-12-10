@@ -162,8 +162,19 @@
   "agent_service": {
     "port": "Port number of the ASERVER server"
   },
+  "agent_chat": {
+    "save_agent_chats":"boolean string (true/false) that enables or disables saving the agent chats to MongoDB"
+  },
+  "agent_incall_audio": {
+    "mute_all_audio": "boolean string (true/false) that enables or disables muting the agent audio at the beginning of a call"
+  },
   "busylight": {
     "enabled": "boolean string (true/false) that enables or disables the busylight in ACE Direct",
     "awayBlink": "boolean string (true/false) that enables blinking while Away, if callers are in queue"
+  },
+  "translation_server": {
+    "private_ip": "IP address of the translation server",
+    "port": "Port number of the translation server",
+    "protocol": "Protocol (http/https) of the translation server"
   }
 }

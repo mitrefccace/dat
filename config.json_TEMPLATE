@@ -166,8 +166,20 @@
   "agent_service": {
     "port": "9006"
   },
+  "agent_chat": {
+    "save_agent_chats":"false"
+  },
+  "agent_incall_audio": {
+    "mute_all_audio": "false"
+  },
   "busylight": {
     "enabled": "true",
     "awayBlink": "true"
+  },
+  "translation_server": {
+    "private_ip": "0.0.0.0",
+    "port": "8005",
+    "protocol": "http",
+    "enabled": "true"
   }
 }

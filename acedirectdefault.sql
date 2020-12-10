@@ -304,6 +304,25 @@ CREATE TABLE `videomail` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `file_uploads`
+--
+
+DROP TABLE IF EXISTS `file_uploads`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_uploads` (
+  `pk_file_id` int(11) NOT NULL AUTO_INCREMENT,
+  `original_filename` varchar(255) NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  `filepath` varchar(500) NOT NULL,
+  `mimetype` varchar(40) DEFAULT NULL,
+  `vrs` varchar(20) NOT NULL,
+  `create_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`pk_file_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=913 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `videomail`
 --
 
