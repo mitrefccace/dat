@@ -1,8 +1,8 @@
 {
   "common": {
     "cleartext": "true",
-    "version":"3.1",
-    "year":"2019",
+    "version":"4.1",
+    "year":"2020",
     "debug_level": "ERROR",
     "fqdn": "host.machine.com",
     "private_ip": "0.0.0.0",
